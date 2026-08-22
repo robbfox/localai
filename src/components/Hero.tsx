@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon, PinIcon } from "./icons";
 
+const mapsDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=Softwire%2C%20315%2C%20Highgate%20Studios%2C%2053-79%20Highgate%20Rd%2C%20London%20NW5%201TL";
+
 export default function Hero() {
   return (
     <section
@@ -37,22 +40,31 @@ export default function Hero() {
               </li>
               <li className="flex items-center gap-3 text-base">
                 <PinIcon className="h-[22px] w-[22px] flex-none text-accent" />
-                <span>Softwire Office, London</span>
+                <span className="flex flex-wrap items-center gap-x-2">
+                  <a
+                    href={mapsDirectionsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline decoration-white/35 underline-offset-3 transition-colors hover:text-accent hover:decoration-accent"
+                  >
+                    Softwire, Highgate Studios, London
+                  </a>
+                  <span className="text-xs uppercase tracking-[0.08em] text-text-dark-secondary">
+                    click for directions
+                  </span>
+                </span>
               </li>
             </ul>
 
             <div className="mt-9 flex flex-wrap gap-4">
+              <span className="inline-flex items-center justify-center rounded-lg border-2 border-white/35 px-7 py-3.5 text-base font-bold text-white/90">
+                By invitation only
+              </span>
               <Link
-                href="#register"
-                className="inline-flex items-center justify-center rounded-lg bg-btn-fill px-7 py-3.5 text-base font-bold text-white transition-all hover:bg-btn-fill-hover hover:shadow-[0_0_0_4px_rgba(0,210,133,0.18)]"
-              >
-                Register now
-              </Link>
-              <Link
-                href="#agenda"
+                href="#why-attend"
                 className="inline-flex items-center justify-center rounded-lg border-2 border-white/55 px-7 py-3.5 text-base font-bold text-white transition-colors hover:border-white hover:bg-white/6"
               >
-                View agenda
+                View activities
               </Link>
             </div>
           </div>

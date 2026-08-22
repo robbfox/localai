@@ -26,10 +26,10 @@ export default function TopBar() {
         </nav>
 
         <Link
-          href="#register"
+          href="#why-attend"
           className="rounded-lg bg-btn-fill px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-btn-fill-hover"
         >
-          Register now
+          Activities
         </Link>
       </div>
     </div>
