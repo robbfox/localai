@@ -4,9 +4,9 @@ import "@fontsource-variable/public-sans/wght-italic.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Building AI solutions for better lives — LocalAI & Softwire",
+  title: "LocalAI away day",
   description:
-    "Join LocalAI, a department in MHCLG, and Softwire for a day of insight, collaboration and practical AI solutions for housing and local government. Wednesday 18 June 2025, Softwire Office, London.",
+    "Join LocalAI and Softwire for a day of insight, collaboration and practical AI solutions for housing and local government. Wednesday 18 June 2025, Softwire Office, London.",
 };
 
 export default function RootLayout({
