@@ -57,14 +57,17 @@ export default function Hero() {
             </ul>
 
             <div className="mt-9 flex flex-wrap gap-4">
-              <span className="inline-flex items-center justify-center rounded-lg border-2 border-white/35 px-7 py-3.5 text-base font-bold text-white/90">
-                By invitation only
-              </span>
               <Link
-                href="#why-attend"
+                href="/activities/am"
                 className="inline-flex items-center justify-center rounded-lg border-2 border-white/55 px-7 py-3.5 text-base font-bold text-white transition-colors hover:border-white hover:bg-white/6"
               >
-                View activities
+                AM activities
+              </Link>
+              <Link
+                href="/activities/pm"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white/55 px-7 py-3.5 text-base font-bold text-white transition-colors hover:border-white hover:bg-white/6"
+              >
+                PM activities
               </Link>
             </div>
           </div>
