@@ -18,7 +18,7 @@ export default function About() {
               across housing and local government.
             </p>
             <p className="mt-4 max-w-[52ch] text-[17px] text-text-light-secondary">
-              Join us as we bring together our Local Transcribe team, and LocalAI policymakers
+              Join us as we bring together our Local Transcribe team and LocalAI policymakers
             to explore real-world scenarios and challenges with a practical and hands on approach, share knowledge
               and shape the future of Local Government.
             </p>

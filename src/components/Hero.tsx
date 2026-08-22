@@ -28,6 +28,9 @@ export default function Hero() {
               Join LocalAI and Softwire for a day of
               insight, collaboration and practical systems thinking, all with a light touch and a focus on fun.
             </p>
+            <p className="mt-3 max-w-[54ch] text-sm font-semibold tracking-[0.03em] text-accent">
+              This is an invitation-only event for LocalAI and Local Transcribe/Softwire colleagues.
+            </p>
 
             <ul className="mt-8 flex flex-col gap-3.5" aria-label="Event details">
               <li className="flex items-center gap-3 text-base">
