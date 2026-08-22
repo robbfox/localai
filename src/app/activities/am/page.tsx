@@ -20,42 +20,42 @@ export default function AmActivitiesPage() {
           Morning activities
         </h1>
         <p className="mt-4 max-w-[65ch] text-text-dark-secondary">
-          Focus: understanding AI risk in local government service design and creating practical
-          mitigations that teams can apply immediately.
+          Coffee first, then opening updates and a creative scenario exercise to frame the day.
         </p>
 
         <section className="mt-10 rounded-xl border border-white/15 bg-black/20 p-6">
           <h2 className="text-xl font-bold">Schedule and instructions</h2>
           <ol className="mt-4 list-decimal space-y-4 pl-5 text-text-dark-secondary">
             <li>
-              <strong className="text-text-dark-primary">09:30–09:45 — Briefing:</strong> form
-              groups of 4–6 and review the scenario pack.
+              <strong className="text-text-dark-primary">09:30 — Coffee and arrival:</strong>{" "}
+              get settled and connect with other attendees.
             </li>
             <li>
-              <strong className="text-text-dark-primary">09:45–10:25 — Risk mapping:</strong>{" "}
-              identify failure modes across data quality, fairness, explainability, and operations.
+              <strong className="text-text-dark-primary">
+                10:00 — Welcome from the organisers:
+              </strong>{" "}
+              short intro to the day and expected outcomes.
             </li>
             <li>
-              <strong className="text-text-dark-primary">10:25–10:45 — Prioritisation:</strong>{" "}
-              score each risk by impact and likelihood; select top 3 to address.
+              <strong className="text-text-dark-primary">10:15 — Update from Kat:</strong>{" "}
+              deputy director update and framing notes for the sessions.
             </li>
             <li>
-              <strong className="text-text-dark-primary">10:45–11:20 — Mitigation design:</strong>{" "}
-              define controls, owners, success metrics, and escalation paths.
-            </li>
-            <li>
-              <strong className="text-text-dark-primary">11:20–11:45 — Playback:</strong> share
-              your one-page risk plan with the room.
+              <strong className="text-text-dark-primary">
+                10:30 onwards — AI catastrophe newscast activity:
+              </strong>{" "}
+              group exercise mimicking a Breakfast TV bulletin announcing an AI problem at MHCLG.
+              Each group prepares a short segment and shares it back.
             </li>
           </ol>
         </section>
 
         <section className="mt-6 rounded-xl border border-white/15 bg-black/20 p-6">
-          <h2 className="text-xl font-bold">Outputs to submit</h2>
+          <h2 className="text-xl font-bold">Before lunch</h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-text-dark-secondary">
-            <li>Top-3 prioritised risk list</li>
-            <li>Mitigation plan with clear owners</li>
-            <li>Success metrics and review cadence</li>
+            <li>Share your group newscast back with the room</li>
+            <li>Capture key AI-risk themes raised during the exercise</li>
+            <li>Lunch is provided</li>
           </ul>
         </section>
       </div>

@@ -20,42 +20,33 @@ export default function PmActivitiesPage() {
           Afternoon activities
         </h1>
         <p className="mt-4 max-w-[65ch] text-text-dark-secondary">
-          Focus: prototyping safeguards and delivery patterns so teams can move from strategy to
-          implementation with confidence.
+          Afternoon programme starts after lunch, with optional warm-up activities before the main
+          session.
         </p>
 
         <section className="mt-10 rounded-xl border border-white/15 bg-black/20 p-6">
           <h2 className="text-xl font-bold">Schedule and instructions</h2>
           <ol className="mt-4 list-decimal space-y-4 pl-5 text-text-dark-secondary">
             <li>
-              <strong className="text-text-dark-primary">13:30–13:45 — Kick-off:</strong> recap
-              morning outputs and choose one priority risk to tackle.
+              <strong className="text-text-dark-primary">After lunch — Optional music session:</strong>{" "}
+              informal creative session if attendees are interested.
             </li>
             <li>
-              <strong className="text-text-dark-primary">13:45–14:35 — Safeguard build:</strong>{" "}
-              design workflow checks, human review points, and monitoring alerts.
+              <strong className="text-text-dark-primary">PM session proper:</strong> main afternoon
+              activities begin after the optional session.
             </li>
             <li>
-              <strong className="text-text-dark-primary">14:35–15:15 — Prototype sprint:</strong>{" "}
-              draft a lightweight operating model (roles, data flow, fallback plan).
-            </li>
-            <li>
-              <strong className="text-text-dark-primary">15:15–15:45 — Peer challenge:</strong>{" "}
-              swap plans with another group for stress testing and feedback.
-            </li>
-            <li>
-              <strong className="text-text-dark-primary">15:45–16:20 — Final playback:</strong>{" "}
-              present your final approach and first 30-day action plan.
+              <strong className="text-text-dark-primary">Whole team activity:</strong> LocalAI Bingo.
             </li>
           </ol>
         </section>
 
         <section className="mt-6 rounded-xl border border-white/15 bg-black/20 p-6">
-          <h2 className="text-xl font-bold">Outputs to submit</h2>
+          <h2 className="text-xl font-bold">Notes</h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-text-dark-secondary">
-            <li>Safeguard workflow diagram</li>
-            <li>Owner-by-owner implementation plan</li>
-            <li>30-day action list with milestones</li>
+            <li>Lunch is provided before the afternoon activities</li>
+            <li>The exact PM run order will be confirmed on the day</li>
+            <li>LocalAI Bingo is currently marked as TBC</li>
           </ul>
         </section>
       </div>
