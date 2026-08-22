@@ -38,6 +38,10 @@ export default function PmActivitiesPage() {
             <li>
               <strong className="text-text-dark-primary">Whole team activity:</strong> LocalAI Bingo.
             </li>
+            <li>
+              <strong className="text-text-dark-primary">After 16:30 — Optional social:</strong>{" "}
+              informal nearby social for anyone who wants to continue the conversation.
+            </li>
           </ol>
         </section>
 
@@ -46,7 +50,7 @@ export default function PmActivitiesPage() {
           <ul className="mt-4 list-disc space-y-2 pl-5 text-text-dark-secondary">
             <li>Lunch is provided before the afternoon activities</li>
             <li>The exact PM run order will be confirmed on the day</li>
-            <li>LocalAI Bingo is currently marked as TBC</li>
+            <li>Optional social at a nearby pub after 16:30</li>
           </ul>
         </section>
       </div>
