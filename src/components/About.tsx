@@ -32,8 +32,8 @@ export default function About() {
 
           <div className="relative -mx-6 min-h-[280px] md:mx-0 md:mr-[-64px]">
             <Image
-              src="https://images.unsplash.com/photo-1772968687393-ded0211acd19?auto=format&fit=crop&w=1400&q=75"
-              alt="Golden hour view of the Houses of Parliament, Big Ben and Westminster Bridge over the River Thames"
+              src="/cute-robot-v2.avif"
+              alt="Cute friendly robot illustration"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover md:rounded-l-2xl"

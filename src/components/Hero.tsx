@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="relative -mx-6 min-h-[280px] sm:mx-0 lg:min-h-full">
             <div className="relative h-[280px] overflow-hidden rounded-2xl lg:absolute lg:inset-0 lg:right-[-64px] lg:h-full lg:rounded-l-2xl lg:rounded-r-none">
               <Image
-                src="https://images.unsplash.com/photo-1760611656071-a8bef0578874?auto=format&fit=crop&w=1400&q=75"
+                src="/hero-image-v2.avif"
                 alt="Modern glass-walled office lounge with floor-to-ceiling windows overlooking the London skyline, soft seating and indoor greenery"
                 fill
                 priority
