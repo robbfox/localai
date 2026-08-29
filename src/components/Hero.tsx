@@ -88,7 +88,7 @@ export default function Hero() {
                 Exploring AI risk for{" "}
                 <span className="relative inline-block">
                   <span className="text-white">a </span>
-                  <span className="relative inline-block text-punk-yellow px-1 py-0.5 font-black drop-shadow-[0_2px_4px_rgba(0,0,0,1)] underline decoration-punk-pink decoration-4 underline-offset-8">
+                  <span className="font-street relative inline-block text-punk-yellow px-1.5 py-0.5 text-[44px] sm:text-[56px] lg:text-[64px] font-normal leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,1)] underline decoration-punk-pink decoration-4 underline-offset-8">
                     safer
                   </span>{" "}
                   <span className="text-white">future.</span>

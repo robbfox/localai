@@ -2,6 +2,8 @@
 
 @theme inline {
   --font-sans: "Public Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-graffiti: var(--font-graffiti), "Permanent Marker", cursive, sans-serif;
+  --font-street: var(--font-street), "Sedgwick Ave Display", cursive, sans-serif;
 
   --color-bg-dark-1: #06161a;
   --color-bg-dark-2: #08181c;
