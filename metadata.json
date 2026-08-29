@@ -1,0 +1,6 @@
+{
+  "name": "LocalAI Away Day",
+  "description": "LocalAI and Softwire event exploring AI risk for a safer future, featuring an abstract punk aesthetic with vibrant pink and yellow paint splatters.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -15,6 +15,16 @@
   --color-text-light-primary: #0f292f;
   --color-text-light-secondary: #475569;
   --color-border-dark: #1e3a40;
+
+  /* Punk Neon Paint Palette */
+  --color-punk-pink: #ff2a85;
+  --color-punk-pink-hot: #ff007f;
+  --color-punk-pink-bright: #ff529a;
+  --color-punk-pink-glow: rgba(255, 42, 133, 0.4);
+  --color-punk-yellow: #ffe600;
+  --color-punk-yellow-neon: #fff500;
+  --color-punk-yellow-acid: #fcee0a;
+  --color-punk-yellow-glow: rgba(255, 230, 0, 0.4);
 }
 
 html {
@@ -25,6 +35,8 @@ body {
   background: var(--color-bg-dark-1);
   color: var(--color-text-dark-primary);
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -44,7 +56,7 @@ body {
 .section-title {
   position: relative;
   padding-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.2;
   font-size: 32px;
@@ -55,14 +67,58 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 32px;
+  width: 38px;
   height: 4px;
   border-radius: 2px;
-  background: var(--color-accent);
+  background: linear-gradient(90deg, #ff2a85 0%, #ffe600 100%);
+  box-shadow: 0 0 10px rgba(255, 42, 133, 0.5);
 }
 
 @media (min-width: 768px) {
   .section-title {
     font-size: 40px;
   }
+}
+
+/* Punk aesthetic utilities */
+.punk-glow-pink {
+  filter: drop-shadow(0 0 12px rgba(255, 42, 133, 0.55));
+}
+
+.punk-glow-yellow {
+  filter: drop-shadow(0 0 12px rgba(255, 230, 0, 0.55));
+}
+
+.punk-badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  position: relative;
+  transform: rotate(-1.5deg);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.punk-badge:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+@keyframes splatter-pop {
+  0% {
+    transform: scale(0.6) rotate(-10deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08) rotate(3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-splatter-pop {
+  animation: splatter-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
