@@ -5,9 +5,9 @@ import "./globals.css";
 import InteractiveSplatter from "@/components/InteractiveSplatter";
 
 export const metadata: Metadata = {
-  title: "LocalAI Away Day — Punk AI Risk Exploration",
+  title: "LocalAI Away Day",
   description:
-    "Join LocalAI and Softwire for a day of insight, collaboration and practical AI risk scenarios. Featuring an abstract punk aesthetic with vibrant pink and yellow paint splatters.",
+    "Join LocalAI and Softwire for a day of insight, collaboration and practical AI risk scenarios.",
 };
 
 export default function RootLayout({
