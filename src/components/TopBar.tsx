@@ -47,18 +47,6 @@ export default function TopBar() {
           >
             Why attend
           </Link>
-          <Link
-            href="/activities/am"
-            className="rounded bg-punk-pink/15 px-2.5 py-1 text-xs font-bold text-punk-pink border border-punk-pink/40 hover:bg-punk-pink hover:text-black transition-colors"
-          >
-            AM Run
-          </Link>
-          <Link
-            href="/activities/pm"
-            className="rounded bg-punk-yellow/15 px-2.5 py-1 text-xs font-bold text-punk-yellow border border-punk-yellow/40 hover:bg-punk-yellow hover:text-black transition-colors"
-          >
-            PM Run
-          </Link>
         </nav>
       </div>
     </div>

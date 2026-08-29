@@ -37,7 +37,7 @@ export default function AmActivitiesPage() {
             <PaintSplatter variant="burst" color="yellow" size={170} rotate={-20} />
           </div>
           <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
-            Morning activities
+            Morning session
           </h1>
         </div>
 

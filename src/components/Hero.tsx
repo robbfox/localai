@@ -152,7 +152,7 @@ export default function Hero() {
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-punk-pink px-8 py-3.5 text-base font-black text-black shadow-[4px_4px_0px_#ffe600] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#ffe600] hover:bg-punk-pink-bright"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    ☀️ AM Activities
+                    ☀️ AM Session
                   </span>
                 </Link>
                 {/* Micro paint splat below button */}
@@ -167,7 +167,7 @@ export default function Hero() {
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-punk-yellow px-8 py-3.5 text-base font-black text-black shadow-[4px_4px_0px_#ff2a85] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#ff2a85] hover:bg-punk-yellow-neon"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    🌙 PM Activities
+                    🌙 PM Session
                   </span>
                 </Link>
                 {/* Micro paint splat below button */}

@@ -37,13 +37,13 @@ export default function PmActivitiesPage() {
             <PaintSplatter variant="burst" color="pink" size={170} rotate={15} />
           </div>
           <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
-            Afternoon activities
+            Afternoon session
           </h1>
         </div>
 
         <p className="mt-4 max-w-[65ch] text-[17px] leading-relaxed text-text-dark-secondary">
-          Afternoon programme starts after lunch, with optional warm-up activities before the main
-          session.
+          Afternoon programme starts after lunch, with an optional warm-up session before the main
+          collaborative workshop.
         </p>
 
         <section className="relative mt-10 overflow-hidden rounded-2xl border-2 border-punk-yellow/40 bg-black/40 p-7 shadow-[6px_6px_0px_rgba(255,230,0,0.3)] backdrop-blur-sm">
@@ -115,7 +115,7 @@ export default function PmActivitiesPage() {
           <ul className="mt-5 space-y-3 pl-2 text-text-dark-secondary">
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-yellow" />
-              <span>Lunch is provided before the afternoon activities</span>
+              <span>Lunch is provided before the afternoon session</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-pink" />
