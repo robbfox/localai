@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon, PinIcon } from "./icons";
 import PaintSplatter, { PunkBadge } from "./PaintSplatter";
 import { PunkStickerTape } from "./PunkAccents";
+import HeroVideo from "./HeroVideo";
 
 const mapsDirectionsUrl =
   "https://www.google.com/maps/dir/?api=1&destination=Softwire%2C%20315%2C%20Highgate%20Studios%2C%2053-79%20Highgate%20Rd%2C%20London%20NW5%201TL";
@@ -208,24 +208,10 @@ export default function Hero() {
               />
             </div>
 
-            <div className="relative h-[320px] overflow-hidden rounded-2xl border-2 border-punk-pink/40 shadow-[8px_8px_0px_rgba(255,230,0,0.3)] lg:absolute lg:inset-0 lg:right-[-64px] lg:h-full lg:rounded-l-2xl lg:rounded-r-none">
-              <Image
-                src="/hero-image-v2.avif"
-                alt="Modern glass-walled office lounge with floor-to-ceiling windows overlooking the London skyline, soft seating and indoor greenery"
-                fill
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-dark-1/20 to-bg-dark-1 lg:bg-gradient-to-r lg:from-bg-dark-1 lg:via-bg-dark-1/30 lg:to-transparent"
-                aria-hidden="true"
-              />
-              {/* Corner punk tape sticker */}
-              <div className="absolute top-4 right-4 z-10">
-                <PunkStickerTape text="LIVE & IN PERSON" color="pink" rotate={4} />
-              </div>
-            </div>
+            <HeroVideo
+              videoSrc="/hero-image.mp4"
+              posterSrc="/hero-image-v2.avif"
+            />
           </div>
         </div>
       </div>

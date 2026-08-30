@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import PaintSplatter, { PunkBadge } from "./PaintSplatter";
 import { PaintDripDivider, PunkStickerTape } from "./PunkAccents";
+import AboutVideo from "./AboutVideo";
 
 export default function About() {
   return (
@@ -101,25 +101,7 @@ export default function About() {
               />
             </div>
 
-            <div className="relative h-[340px] md:h-[440px] overflow-hidden rounded-2xl md:rounded-l-3xl border-4 border-black/80 shadow-[10px_10px_0px_#ff2a85]">
-              <Image
-                src="/cute-robot-v2.avif"
-                alt="Cute friendly robot illustration"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"
-                aria-hidden="true"
-              />
-              {/* Floating Punk Sticker */}
-              <div className="absolute bottom-4 left-4 z-10">
-                <PunkBadge color="pink">
-                  🤖 AI WITH PURPOSE
-                </PunkBadge>
-              </div>
-            </div>
+            <AboutVideo videoSrc="/cute-robot.mp4" />
           </div>
         </div>
       </div>
