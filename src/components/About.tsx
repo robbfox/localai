@@ -34,9 +34,9 @@ export default function About() {
           <div className="relative flex flex-col justify-center py-6 md:pr-14">
             <div className="mb-4 flex items-center gap-3">
               <PunkBadge color="yellow">
-                THE MISSION
+                THE IDEA
               </PunkBadge>
-              <PunkStickerTape text="PRACTICAL AI" color="pink" rotate={-2} />
+              <PunkStickerTape text="TIME TOGETHER" color="pink" rotate={-2} />
             </div>
 
             <div className="relative">
@@ -45,18 +45,20 @@ export default function About() {
                 <PaintSplatter variant="burst" color="yellow" size={160} rotate={-25} />
               </div>
               <h2 className="section-title text-text-light-primary font-black">
-                About the event
+                A day out of the usual routine
               </h2>
             </div>
 
             <p className="mt-4 max-w-[52ch] text-[18px] font-semibold leading-relaxed text-text-light-primary">
-              We are driving the responsible and effective use of AI
-              across housing and local government.
+              A largely remote team. A chance to meet properly.
+              A day that feels different from another call.
             </p>
             <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-text-light-secondary">
-              Join us as we bring together our Local Transcribe team and LocalAI policymakers
-            to explore real-world scenarios and challenges with a practical and hands on approach, share knowledge
-              and shape the future of Local Government.
+              Our Local Transcribe team, LocalAI policymakers and Softwire
+              colleagues are getting together in person. We will catch up,
+              have some fun and explore AI risk through hands-on group
+              activities. The work gives us a shared starting point;
+              getting to know each other is what the day is really for.
             </p>
 
             <div className="mt-8 flex items-center gap-4">

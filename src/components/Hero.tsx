@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { CalendarIcon, ClockIcon, PinIcon } from "./icons";
-import PaintSplatter, { PunkBadge } from "./PaintSplatter";
-import { PunkStickerTape } from "./PunkAccents";
+import { ArrowDown, ArrowUpRight, CalendarDays, Clock3, MapPin } from "lucide-react";
 import HeroVideo from "./HeroVideo";
 
 const mapsDirectionsUrl =
@@ -9,213 +7,77 @@ const mapsDirectionsUrl =
 
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="relative overflow-hidden bg-gradient-to-b from-bg-dark-1 via-bg-dark-2 to-bg-dark-1 pt-12 pb-8"
-    >
-      {/* Background large abstract paint splatters */}
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        {/* Massive top-right yellow & pink clash splatter */}
-        <div className="absolute -top-16 -right-16 opacity-75 md:opacity-85">
-          <PaintSplatter
-            variant="clash"
-            color="duo"
-            size={360}
-            rotate={20}
-          />
-        </div>
-
-        {/* Bottom-left electric pink paint explosion with drips */}
-        <div className="absolute -bottom-10 -left-12 opacity-65 md:opacity-80">
-          <PaintSplatter
-            variant="drip"
-            color="pink"
-            size={320}
-            rotate={-15}
-            className="punk-glow-pink"
-          />
-        </div>
-
-        {/* Mid-screen spray paint drift */}
-        <div className="absolute top-1/3 left-1/3 opacity-30">
-          <PaintSplatter
-            variant="spray"
-            color="yellow"
-            size={260}
-            rotate={110}
-          />
-        </div>
-
-        {/* Fine splatter dots */}
-        <div className="absolute top-20 left-12 opacity-50">
-          <PaintSplatter variant="dots" color="duo" size={140} rotate={-30} />
-        </div>
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-16">
-        <div className="grid grid-cols-1 items-center gap-10 lg:min-h-[600px] lg:grid-cols-2 lg:gap-8">
-          {/* Copy */}
-          <div className="relative pb-12 lg:pr-6 lg:pb-16">
-            {/* Header tag badge with punk styling */}
-            <div className="flex items-center gap-3">
-              <PunkBadge color="pink">
-                ⚡ IN-PERSON EVENT
-              </PunkBadge>
-              <PunkStickerTape text="LONDON 2026" color="yellow" rotate={2} />
-            </div>
-
-            {/* Headline with pink/yellow splatter backdrop */}
-            <div className="relative mt-6">
-              {/* Splatter highlight positioned to frame the heading cleanly without obscuring text */}
-              <div className="pointer-events-none absolute -top-12 -left-10 -z-10 opacity-50">
-                <PaintSplatter
-                  variant="burst"
-                  color="yellow"
-                  size={170}
-                  rotate={-15}
-                />
-              </div>
-              <div className="pointer-events-none absolute top-14 right-10 -z-10 opacity-40">
-                <PaintSplatter
-                  variant="spray"
-                  color="pink"
-                  size={200}
-                  rotate={10}
-                />
-              </div>
-
-              <h1 className="text-[40px] leading-[1.08] font-black tracking-tight text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)] sm:text-[52px] lg:text-[60px]">
-                Exploring AI risk for{" "}
-                <span className="relative inline-block">
-                  <span className="text-white">a </span>
-                  <span className="font-street relative inline-block text-punk-yellow px-1.5 py-0.5 text-[44px] sm:text-[56px] lg:text-[64px] font-normal leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,1)] underline decoration-punk-pink decoration-4 underline-offset-8">
-                    safer
-                  </span>{" "}
-                  <span className="text-white">future.</span>
-                  <span className="absolute -top-3 -right-6 text-punk-pink text-3xl font-black rotate-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-                    *
-                  </span>
-                </span>
-              </h1>
-            </div>
-
-            <p className="mt-6 max-w-[46ch] text-[17px] leading-relaxed text-text-dark-secondary">
-              Join <span className="font-bold text-white">LocalAI</span> and{" "}
-              <span className="font-bold text-white">Softwire</span> for a day of
-              insight, collaboration and practical systems thinking, all with a light touch and a focus on fun.
+    <section id="top" aria-labelledby="event-title" className="event-hero relative overflow-hidden">
+      <div className="relative mx-auto max-w-[1280px] px-6 pt-14 pb-10 md:px-16 md:pt-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="event-enter">
+            <p className="event-eyebrow flex flex-wrap items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-punk-yellow" aria-hidden="true" />
+              LocalAI × Softwire <span className="text-white/30">/</span> Away day 2026
             </p>
-
-            <div className="mt-4 inline-flex items-center gap-2 rounded-md bg-punk-pink/15 border border-punk-pink/40 px-3.5 py-2 text-sm font-bold text-punk-pink">
-              <span className="h-2 w-2 rounded-full bg-punk-yellow animate-pulse" />
-              Invitation-only event for LocalAI and Softwire colleagues.
+            <h1 id="event-title" className="mt-7 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.06] font-black tracking-[-0.045em]">
+              Beyond the screen.<br />
+              <span className="text-punk-yellow">Together for a day.</span>
+            </h1>
+            <p className="mt-7 max-w-[46ch] text-lg leading-relaxed text-slate-300">
+              We spend most of our working days apart. This one is about being
+              together: catching up, getting to know each other and exploring
+              a few big AI questions along the way.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link href="#programme" className="event-button event-button-primary">
+                Explore the day <ArrowDown size={18} aria-hidden="true" />
+              </Link>
+              <Link href="#together" className="event-button event-button-secondary">
+                More than a meeting <ArrowUpRight size={18} aria-hidden="true" />
+              </Link>
             </div>
-
-            {/* Event Details with Punk accents */}
-            <ul className="mt-8 flex flex-col gap-3.5" aria-label="Event details">
-              <li className="flex items-center gap-3 text-base">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-punk-pink/20 text-punk-pink border border-punk-pink/40">
-                  <CalendarIcon className="h-5 w-5" />
-                </span>
-                <span className="font-medium">Wednesday 30 September 2026</span>
-              </li>
-              <li className="flex items-center gap-3 text-base">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-punk-yellow/20 text-punk-yellow border border-punk-yellow/40">
-                  <ClockIcon className="h-5 w-5" />
-                </span>
-                <span className="font-medium">09:30 – 16:30</span>
-              </li>
-              <li className="flex items-center gap-3 text-base">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-punk-pink/20 text-punk-pink border border-punk-pink/40">
-                  <PinIcon className="h-5 w-5" />
-                </span>
-                <span className="flex flex-wrap items-center gap-x-2">
-                  <a
-                    href={mapsDirectionsUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-bold underline decoration-punk-yellow underline-offset-4 transition-colors hover:text-punk-yellow"
-                  >
-                    Softwire, Highgate Studios, London
-                  </a>
-                  <span className="text-xs uppercase tracking-[0.08em] font-semibold text-punk-pink">
-                    [click for directions]
-                  </span>
-                </span>
-              </li>
-            </ul>
-
-            {/* Action Buttons with Punk Splatter Style */}
-            <div className="relative mt-10 flex flex-wrap gap-5">
-              <div className="relative">
-                <Link
-                  href="/activities/am"
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-punk-pink px-8 py-3.5 text-base font-black text-black shadow-[4px_4px_0px_#ffe600] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#ffe600] hover:bg-punk-pink-bright"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    ☀️ AM Session
-                  </span>
-                </Link>
-                {/* Micro paint splat below button */}
-                <div className="pointer-events-none absolute -bottom-3 -left-3 opacity-90">
-                  <PaintSplatter variant="dots" color="yellow" size={35} />
-                </div>
-              </div>
-
-              <div className="relative">
-                <Link
-                  href="/activities/pm"
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-punk-yellow px-8 py-3.5 text-base font-black text-black shadow-[4px_4px_0px_#ff2a85] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#ff2a85] hover:bg-punk-yellow-neon"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    🌙 PM Session
-                  </span>
-                </Link>
-                {/* Micro paint splat below button */}
-                <div className="pointer-events-none absolute -bottom-3 -right-3 opacity-90">
-                  <PaintSplatter variant="dots" color="pink" size={35} />
-                </div>
-              </div>
-            </div>
+            <p className="mt-5 text-sm leading-relaxed text-slate-400">
+              In person · Invitation-only for LocalAI and Softwire colleagues
+            </p>
           </div>
 
-          {/* Hero Image with Paint Splatters & Drips framing */}
-          <div className="relative -mx-6 min-h-[300px] sm:mx-0 lg:min-h-full">
-            {/* Paint splatter framing accents */}
-            <div className="pointer-events-none absolute -top-8 -left-8 z-20">
-              <PaintSplatter
-                variant="burst"
-                color="pink"
-                size={140}
-                rotate={-20}
-                className="punk-glow-pink"
-              />
+          <div className="event-hero-media event-enter relative min-w-0">
+            <div className="mb-4 flex items-center justify-between text-xs font-semibold tracking-[0.16em] uppercase text-slate-400">
+              <span>A different kind of working day</span>
+              <span className="text-punk-yellow">30.09.26</span>
             </div>
-            <div className="pointer-events-none absolute -bottom-10 -right-8 z-20">
-              <PaintSplatter
-                variant="clash"
-                color="duo"
-                size={180}
-                rotate={30}
-                className="punk-glow-yellow"
-              />
+            <HeroVideo videoSrc="/hero-image.mp4" posterSrc="/hero-image-v2.avif" />
+            <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/15 pt-5">
+              {[
+                ["01", "Catch up properly"],
+                ["02", "Try something together"],
+                ["03", "Have a little fun"],
+              ].map(([number, label]) => (
+                <div key={number}>
+                  <span className="text-xs font-semibold text-punk-pink-bright">{number}</span>
+                  <p className="mt-2 text-sm leading-snug font-medium text-slate-200">{label}</p>
+                </div>
+              ))}
             </div>
-            <div className="pointer-events-none absolute top-1/2 -right-10 z-20">
-              <PaintSplatter
-                variant="drip"
-                color="yellow"
-                size={130}
-                rotate={90}
-              />
-            </div>
-
-            <HeroVideo
-              videoSrc="/hero-image.mp4"
-              posterSrc="/hero-image-v2.avif"
-            />
           </div>
         </div>
+
+        <ul aria-label="Event details" className="mt-14 grid gap-6 rounded-2xl border border-white/15 bg-white/[0.03] p-6 md:mt-20 md:grid-cols-[1fr_0.7fr_1.3fr]">
+          <li className="flex items-center gap-4">
+            <CalendarDays className="shrink-0 text-punk-yellow" aria-hidden="true" />
+            <div><p className="event-detail-label">Save the date</p><time dateTime="2026-09-30" className="text-sm font-semibold">Wednesday 30 September 2026</time></div>
+          </li>
+          <li className="flex items-center gap-4">
+            <Clock3 className="shrink-0 text-punk-pink-bright" aria-hidden="true" />
+            <div><p className="event-detail-label">Make a day of it</p><p className="text-sm font-semibold">09:30–16:30 · London time</p></div>
+          </li>
+          <li className="flex items-center gap-4">
+            <MapPin className="shrink-0 text-punk-yellow" aria-hidden="true" />
+            <div>
+              <p className="event-detail-label">Meet us here</p>
+              <a href={mapsDirectionsUrl} target="_blank" rel="noreferrer" className="text-sm font-semibold underline decoration-white/30 underline-offset-4 hover:text-punk-yellow">
+                Softwire, Highgate Studios, London<span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   );
 }
-

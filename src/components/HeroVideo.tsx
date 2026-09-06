@@ -17,7 +17,7 @@ export default function HeroVideo({
   playbackRate = 1.0,
 }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [hasVideoError, setHasVideoError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,26 +27,14 @@ export default function HeroVideo({
     if (!video) return;
 
     video.playbackRate = playbackRate;
-    video.muted = isMuted;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          if (videoRef.current) {
-            videoRef.current.playbackRate = playbackRate;
-          }
-          setIsPlaying(true);
-        })
-        .catch(() => {
-          video.muted = true;
-          setIsMuted(true);
-          video.playbackRate = playbackRate;
-          video.play().catch(() => {
-            setIsPlaying(false);
-          });
-        });
-    }
-  }, [isMuted, playbackRate]);
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!motionPreference.matches) video.play().catch(() => {});
+    const handleMotionChange = () => {
+      if (motionPreference.matches) video.pause();
+    };
+    motionPreference.addEventListener("change", handleMotionChange);
+    return () => motionPreference.removeEventListener("change", handleMotionChange);
+  }, [playbackRate]);
 
   const handleLoadedData = () => {
     if (videoRef.current) {
@@ -60,7 +48,7 @@ export default function HeroVideo({
     if (!video) return;
 
     if (video.paused) {
-      video.play().then(() => setIsPlaying(true));
+      video.play().catch(() => {});
     } else {
       video.pause();
       setIsPlaying(false);
@@ -77,29 +65,20 @@ export default function HeroVideo({
   };
 
   return (
-    <div className="group relative h-[320px] overflow-hidden rounded-2xl border-2 border-punk-pink/40 bg-black/90 shadow-[8px_8px_0px_rgba(255,230,0,0.3)] lg:absolute lg:inset-0 lg:right-[-64px] lg:h-full lg:rounded-l-2xl lg:rounded-r-none">
+    <div className="group relative h-[320px] overflow-hidden rounded-2xl border border-white/15 bg-black/90 shadow-2xl sm:h-[400px]">
       {!hasVideoError ? (
         <>
           <video
             ref={videoRef}
             src={videoSrc}
             poster={posterSrc}
-            autoPlay
             loop
             muted={isMuted}
             playsInline
             onLoadedData={handleLoadedData}
-            onError={() => {
-              // Try fallback if hero-image.mp4 failed
-              const video = videoRef.current;
-              if (video && !video.src.includes("hero-image.mp4.mp4")) {
-                video.src = "/hero-image.mp4.mp4";
-                video.load();
-                video.play().catch(() => {});
-              } else {
-                setHasVideoError(true);
-              }
-            }}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onError={() => setHasVideoError(true)}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             id="hero-video-player"
           />
@@ -137,7 +116,7 @@ export default function HeroVideo({
             type="button"
             onClick={togglePlay}
             aria-label={isPlaying ? "Pause video" : "Play video"}
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-black/70 text-white border border-punk-pink/50 backdrop-blur-md transition-all hover:bg-punk-pink hover:text-black shadow-[2px_2px_0px_#ffe600]"
+            className="flex h-11 w-11 items-center justify-center rounded-lg bg-black/70 text-white border border-punk-pink/50 backdrop-blur-md transition-all hover:bg-punk-pink hover:text-black shadow-[2px_2px_0px_#ffe600]"
             id="hero-video-play-toggle"
           >
             {isPlaying ? (
@@ -151,7 +130,7 @@ export default function HeroVideo({
             type="button"
             onClick={toggleMute}
             aria-label={isMuted ? "Unmute video" : "Mute video"}
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-black/70 text-white border border-punk-yellow/50 backdrop-blur-md transition-all hover:bg-punk-yellow hover:text-black shadow-[2px_2px_0px_#ff2a85]"
+            className="flex h-11 w-11 items-center justify-center rounded-lg bg-black/70 text-white border border-punk-yellow/50 backdrop-blur-md transition-all hover:bg-punk-yellow hover:text-black shadow-[2px_2px_0px_#ff2a85]"
             id="hero-video-mute-toggle"
           >
             {isMuted ? (

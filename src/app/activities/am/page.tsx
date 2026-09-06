@@ -42,7 +42,7 @@ export default function AmActivitiesPage() {
         </div>
 
         <p className="mt-4 max-w-[65ch] text-[17px] leading-relaxed text-text-dark-secondary">
-          Coffee first, then opening updates and a creative scenario exercise to frame the day.
+          Coffee and a proper catch-up first, then a relaxed welcome and a creative group activity.
         </p>
 
         <section className="relative mt-10 overflow-hidden rounded-2xl border-2 border-punk-pink/40 bg-black/40 p-7 shadow-[6px_6px_0px_rgba(255,42,133,0.3)] backdrop-blur-sm">
@@ -72,25 +72,14 @@ export default function AmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  10:00 — Welcome from the organisers
+                  10:00 — A quick hello from the organisers
                 </strong>
-                <span className="text-sm">Short intro to the day and expected outcomes.</span>
-              </div>
-            </li>
-            <li className="flex gap-4 items-start">
-              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-pink text-black font-black text-xs shadow-[2px_2px_0px_#ffe600]">
-                03
-              </span>
-              <div>
-                <strong className="text-white block text-base font-bold">
-                  10:15 — Update from Kat
-                </strong>
-                <span className="text-sm">Deputy director update and framing notes for the sessions.</span>
+                <span className="text-sm">Get everyone together and settle into the day before the activities.</span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
               <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-yellow text-black font-black text-xs shadow-[2px_2px_0px_#ff2a85]">
-                04
+                03
               </span>
               <div>
                 <strong className="text-punk-yellow block text-base font-black">
@@ -132,4 +121,3 @@ export default function AmActivitiesPage() {
     </main>
   );
 }
-

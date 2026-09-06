@@ -15,7 +15,7 @@ export default function AboutVideo({
   videoSrc = "/cute-robot.mp4",
 }: AboutVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [hasVideoError, setHasVideoError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,30 +24,21 @@ export default function AboutVideo({
     const video = videoRef.current;
     if (!video) return;
 
-    video.muted = isMuted;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch(() => {
-          // Autoplay with sound may be prevented by browser policy; ensure muted
-          video.muted = true;
-          setIsMuted(true);
-          video.play().catch(() => {
-            setIsPlaying(false);
-          });
-        });
-    }
-  }, [isMuted]);
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!motionPreference.matches) video.play().catch(() => {});
+    const handleMotionChange = () => {
+      if (motionPreference.matches) video.pause();
+    };
+    motionPreference.addEventListener("change", handleMotionChange);
+    return () => motionPreference.removeEventListener("change", handleMotionChange);
+  }, []);
 
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
 
     if (video.paused) {
-      video.play().then(() => setIsPlaying(true));
+      video.play().catch(() => {});
     } else {
       video.pause();
       setIsPlaying(false);
@@ -67,7 +58,7 @@ export default function AboutVideo({
     const video = videoRef.current;
     if (!video) return;
     video.currentTime = 0;
-    video.play().then(() => setIsPlaying(true));
+    video.play().catch(() => {});
   };
 
   return (
@@ -78,11 +69,12 @@ export default function AboutVideo({
             ref={videoRef}
             src={videoSrc}
             poster={posterSrc}
-            autoPlay
             loop
             muted={isMuted}
             playsInline
             onLoadedData={() => setIsLoaded(true)}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
             onError={() => setHasVideoError(true)}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             id="about-scenario-video"
@@ -136,7 +128,7 @@ export default function AboutVideo({
             type="button"
             onClick={togglePlay}
             aria-label={isPlaying ? "Pause video" : "Play video"}
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-black/80 text-white border border-punk-pink/50 backdrop-blur-md transition-all hover:bg-punk-pink hover:text-black hover:scale-105 shadow-[2px_2px_0px_#ffe600]"
+            className="flex h-11 w-11 items-center justify-center rounded-lg bg-black/80 text-white border border-punk-pink/50 backdrop-blur-md transition-all hover:bg-punk-pink hover:text-black hover:scale-105 shadow-[2px_2px_0px_#ffe600]"
             id="video-play-toggle"
           >
             {isPlaying ? (
@@ -150,7 +142,7 @@ export default function AboutVideo({
             type="button"
             onClick={toggleMute}
             aria-label={isMuted ? "Unmute video" : "Mute video"}
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-black/80 text-white border border-punk-yellow/50 backdrop-blur-md transition-all hover:bg-punk-yellow hover:text-black hover:scale-105 shadow-[2px_2px_0px_#ff2a85]"
+            className="flex h-11 w-11 items-center justify-center rounded-lg bg-black/80 text-white border border-punk-yellow/50 backdrop-blur-md transition-all hover:bg-punk-yellow hover:text-black hover:scale-105 shadow-[2px_2px_0px_#ff2a85]"
             id="video-mute-toggle"
           >
             {isMuted ? (
@@ -164,7 +156,7 @@ export default function AboutVideo({
             type="button"
             onClick={restartVideo}
             aria-label="Restart video"
-            className="hidden sm:flex h-9 w-9 items-center justify-center rounded-lg bg-black/80 text-white border border-white/30 backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-105 shadow-[2px_2px_0px_#000]"
+            className="hidden sm:flex h-11 w-11 items-center justify-center rounded-lg bg-black/80 text-white border border-white/30 backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-105 shadow-[2px_2px_0px_#000]"
             id="video-restart-button"
           >
             <RotateCcw className="h-3.5 w-3.5" />

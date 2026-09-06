@@ -124,3 +124,107 @@ body {
 .animate-splatter-pop {
   animation: splatter-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
+:where(section, article, main)[id] {
+  scroll-margin-top: 11rem;
+}
+
+:where(a, button, summary):focus-visible {
+  outline: 3px solid #ff529a;
+  outline-offset: 5px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.event-hero {
+  background:
+    radial-gradient(ellipse at 95% 10%, #ff2a8514, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, #ffe6000a, transparent 50%),
+    #06161a;
+}
+
+.event-eyebrow {
+  color: #ff75b0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+}
+
+.event-detail-label {
+  margin-bottom: 0.35rem;
+  color: #94a3b8;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.event-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: background 180ms, border-color 180ms, transform 180ms;
+}
+
+.event-button-primary {
+  background: #ffe600;
+  color: #06161a;
+}
+
+.event-button-primary:hover, .event-nav-cta:hover {
+  background: #fff56b;
+}
+
+.event-button-secondary {
+  border: 1px solid #ffffff30;
+  color: white;
+}
+
+.event-button-secondary:hover {
+  background: #ffffff0a;
+  border-color: #ffffff70;
+}
+
+.event-filter {
+  color: #cbd5e1;
+  transition: background 180ms, color 180ms;
+}
+
+.event-filter:hover {
+  background: #ffffff0d;
+}
+
+.event-filter[aria-pressed="true"] {
+  background: #ffe600;
+  color: #06161a;
+}
+
+.event-session {
+  transition: background 180ms, border-color 180ms, transform 180ms;
+}
+
+.event-session:hover, .event-session[open] {
+  border-color: #ffe60055;
+  background: #ffffff06;
+}
+
+@keyframes event-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .event-enter { animation: event-enter 650ms ease-out both; }
+  .event-hero-media { animation-delay: 100ms; }
+  .event-session-content { animation: event-enter 200ms ease-out; }
+  .event-button:hover { transform: translateY(-2px); }
+}

@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import TopBar from "@/components/TopBar";
 import WhyAttend from "@/components/WhyAttend";
+import EventProgramme from "@/components/EventProgramme";
+import TeamConnection from "@/components/TeamConnection";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
+        <EventProgramme />
+        <TeamConnection />
         <WhyAttend />
       </main>
 

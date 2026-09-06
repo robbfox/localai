@@ -17,6 +17,22 @@ Open http://localhost:3000.
 - `src/app/layout.tsx` — root layout, metadata, self-hosted Public Sans font
 - `src/app/globals.css` — design tokens (colors, section-title style) via Tailwind `@theme`
 - `src/components/` — `TopBar`, `Hero`, `About`, `WhyAttend`, `FeatureCard`, `Footer`, `icons.tsx`
+- `src/components/EventProgramme.tsx` — homepage agenda, morning/afternoon filters and expandable session details
+- `src/components/TeamConnection.tsx` — in-person team connection and interactive conversation prompts
+
+## Updating the programme
+
+Edit the session list in `EventProgramme.tsx` and keep the detailed guides in
+`src/app/activities/am/page.tsx` and `src/app/activities/pm/page.tsx` in sync.
+Afternoon timings are deliberately provisional. Speaker contributions are
+informal and are not scheduled agenda items. The day is primarily a chance
+for a largely remote team to reconnect in person.
+
+Attendance remains invitation-only: the page refers colleagues to their event
+invitation rather than offering an unconnected registration form.
+Agenda filters announce the result count, expandable details support keyboard
+navigation, and entrance animations and video autoplay respect reduced-motion
+preferences. Video playback can still be started manually.
 
 ## Notes
 

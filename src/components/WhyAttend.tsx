@@ -6,29 +6,29 @@ import { PunkStickerTape } from "./PunkAccents";
 const features = [
   {
     icon: <LightbulbIcon className="h-full w-full" />,
-    title: "Learn",
+    title: "Get curious",
     description:
-      "Discover how AI is solving real challenges in housing and local government.",
+      "Explore a few big AI questions together, without needing all the answers.",
     color: "pink" as const,
   },
   {
     icon: <ConnectIcon className="h-full w-full" />,
-    title: "Connect",
+    title: "Reconnect",
     description:
-      "Network with peers and experts from across the public sector and industry.",
+      "Catch up with familiar faces and get to know colleagues beyond the video-call grid.",
     color: "yellow" as const,
   },
   {
     icon: <RocketIcon className="h-full w-full" />,
-    title: "Collaborate",
-    description: "Share ideas and work together to accelerate positive change.",
+    title: "Try things together",
+    description: "Swap the usual tasks for creative challenges and a different kind of teamwork.",
     color: "pink" as const,
   },
   {
     icon: <StarIcon className="h-full w-full" />,
-    title: "Make an impact",
+    title: "Enjoy the day",
     description:
-      "Build the skills and partnerships to deliver better outcomes for citizens.",
+      "Make space for a laugh, a shared lunch and conversations that are not just about work.",
     color: "yellow" as const,
   },
 ];
@@ -84,7 +84,7 @@ export default function WhyAttend() {
         <div className="mb-12 flex flex-col items-start gap-3 md:mb-16">
           <div className="flex items-center gap-3">
             <PunkBadge color="pink">
-              COMMUNITY & IMPACT
+              A DAY FOR THE TEAM
             </PunkBadge>
             <PunkStickerTape text="WHAT TO EXPECT" color="yellow" rotate={-1} />
           </div>
@@ -116,4 +116,3 @@ export default function WhyAttend() {
     </section>
   );
 }
-
