@@ -36,8 +36,8 @@ export default function EventProgramme() {
               <p className="text-sm font-semibold text-white">A little room for spontaneity</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-400">
                 Lunch is provided. Any contributions from speakers will be
-                informal, rather than scheduled talks. Afternoon timings and
-                the exact run order will be confirmed on the day.
+                informal, rather than scheduled talks. An exact schedule
+                will be confirmed nearer the day.
               </p>
             </div>
             <div className="mt-6 flex flex-wrap gap-5 text-sm">

@@ -50,7 +50,7 @@ export default function About() {
             </div>
 
             <p className="mt-4 max-w-[52ch] text-[18px] font-semibold leading-relaxed text-text-light-primary">
-              A largely remote team. A chance to meet properly.
+              A somewhat devolved team. A chance to meet properly.
               A day that feels different from another call.
             </p>
             <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-text-light-secondary">
