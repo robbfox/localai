@@ -25,8 +25,8 @@ Open http://localhost:3000.
 Edit the session list in `EventProgramme.tsx` and keep the detailed guides in
 `src/app/activities/am/page.tsx` and `src/app/activities/pm/page.tsx` in sync.
 Afternoon timings are deliberately provisional. Speaker contributions are
-informal and are not scheduled agenda items. The day is primarily a chance
-for a largely remote team to reconnect in person.
+informal and are not scheduled agenda items. The day offers practical AI
+activities and time to catch up, without assuming everyone works remotely.
 
 Attendance remains invitation-only: the page refers colleagues to their event
 invitation rather than offering an unconnected registration form.

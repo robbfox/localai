@@ -36,7 +36,7 @@ export default function About() {
               <PunkBadge color="yellow">
                 THE IDEA
               </PunkBadge>
-              <PunkStickerTape text="TIME TOGETHER" color="pink" rotate={-2} />
+              <PunkStickerTape text="FRESH PERSPECTIVES" color="pink" rotate={-2} />
             </div>
 
             <div className="relative">
@@ -50,15 +50,15 @@ export default function About() {
             </div>
 
             <p className="mt-4 max-w-[52ch] text-[18px] font-semibold leading-relaxed text-text-light-primary">
-              A somewhat devolved team. A chance to meet properly.
-              A day that feels different from another call.
+              A chance to step back from day-to-day work,
+              compare notes and try something different.
             </p>
             <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-text-light-secondary">
               Our Local Transcribe team, LocalAI policymakers and Softwire
-              colleagues are getting together in person. We will catch up,
-              have some fun and explore AI risk through hands-on group
-              activities. The work gives us a shared starting point;
-              getting to know each other is what the day is really for.
+              colleagues will explore AI risk through hands-on group
+              activities, with time to catch up and have some fun.
+              Expect a mix of practical challenges, informal discussions
+              and a different perspective on the work we do.
             </p>
 
             <div className="mt-8 flex items-center gap-4">

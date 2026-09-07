@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Coffee, Sparkles, Users } from "lucide-react";
 
 const sessions = [
-  { id: "arrival", period: "Morning", time: "09:30", title: "Coffee & connection", category: "Meet & mingle", description: "Get settled, grab breakfast and connect with other attendees before the day begins.", detail: "A chance to catch up with colleagues and meet the people you will be working with.", icon: Coffee },
+  { id: "arrival", period: "Morning", time: "09:30", title: "Coffee & arrival", category: "Getting started", description: "Get settled, grab breakfast and have a chat before the day begins.", detail: "A chance to catch up with colleagues before the activities.", icon: Coffee },
   { id: "welcome", period: "Morning", time: "10:00", title: "A quick hello", category: "Welcome", description: "Get everyone together and settle into the day.", detail: "A relaxed introduction from the organisers before we get stuck into the activities.", icon: Users },
   { id: "newscast", period: "Morning", time: "10:30 onwards", title: "Breaking news: an AI catastrophe", category: "Hands-on challenge", description: "Step into a Breakfast TV newsroom and report on an imagined AI problem at MHCLG.", detail: "Work in groups to prepare a short bulletin, share it with the room before lunch and capture the key AI-risk themes raised.", icon: Sparkles },
   { id: "music", period: "Afternoon", time: "After lunch", title: "A creative warm-up", category: "Optional · Music", description: "An informal music session for anyone who would like to take part.", detail: "A creative jam before the main afternoon activities. Participation is optional; the exact run order will be confirmed on the day.", icon: Sparkles },
@@ -26,10 +26,10 @@ export default function EventProgramme() {
           <div>
             <p className="event-eyebrow">The programme</p>
             <h2 id="programme-title" className="mt-4 text-4xl leading-tight font-black tracking-tight md:text-5xl">
-              A loose plan.<br /><span className="text-punk-yellow">A shared day.</span>
+              A loose plan.<br /><span className="text-punk-yellow">Plenty to try.</span>
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-slate-300">
-              A guide to our time together, not a conference agenda. Browse the
+              A guide to the day, not a conference agenda. Browse the
               activities and open anything that catches your eye.
             </p>
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5">

@@ -13,14 +13,14 @@ const features = [
   },
   {
     icon: <ConnectIcon className="h-full w-full" />,
-    title: "Reconnect",
+    title: "Catch up",
     description:
-      "Catch up with familiar faces and get to know colleagues beyond the video-call grid.",
+      "Compare notes with colleagues and pick up conversations outside the usual meetings.",
     color: "yellow" as const,
   },
   {
     icon: <RocketIcon className="h-full w-full" />,
-    title: "Try things together",
+    title: "Try something new",
     description: "Swap the usual tasks for creative challenges and a different kind of teamwork.",
     color: "pink" as const,
   },

@@ -21,7 +21,7 @@ const sedgwickAve = Sedgwick_Ave_Display({
 export const metadata: Metadata = {
   title: "LocalAI Away Day",
   description:
-    "A day away from the screen for LocalAI and Softwire colleagues: reconnect in person, explore AI questions and enjoy shared activities.",
+    "A change of pace for LocalAI and Softwire colleagues: practical AI challenges, fresh ideas and time to catch up.",
 };
 
 export default function RootLayout({

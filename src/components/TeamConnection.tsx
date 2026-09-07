@@ -4,9 +4,9 @@ import { useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 const prompts = [
-  "What is something you enjoy doing that never comes up on a work call?",
+  "What is something you enjoy doing outside work?",
   "What is a small win from the last few weeks that we might have missed?",
-  "If we could make one part of remote working better, what would you change?",
+  "If we could simplify one part of our day-to-day work, what would you change?",
   "What is something a teammate has helped you with recently?",
   "What have you read, watched or listened to lately that you would recommend?",
   "What would you like to try together as a team?",
@@ -19,16 +19,16 @@ export default function TeamConnection() {
     <section id="together" aria-labelledby="together-title" className="border-t border-white/10 bg-bg-dark-2 py-20 md:py-28">
       <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 md:px-16 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="event-eyebrow">Same team. Same room. For a change.</p>
+          <p className="event-eyebrow">Room for a conversation</p>
           <h2 id="together-title" className="mt-4 text-4xl leading-tight font-black tracking-tight md:text-5xl">The best bits might<br />be between activities.</h2>
           <p className="mt-6 max-w-lg leading-relaxed text-slate-300">
-            Working remotely gives us plenty of video calls, but fewer chances
-            for a proper catch-up. This is time to put faces to names, pick up
-            conversations and get to know the people behind the work.
+            Whether you see colleagues most days or less often, there is
+            value in a conversation without a task list attached. Use the
+            breaks to compare notes, follow up on an idea or just catch up.
           </p>
           <p className="mt-4 max-w-lg leading-relaxed text-slate-400">
-            Come for the shared activities, stay for the conversations. There
-            is room to listen, join in and find your own pace.
+            There is no need to fill every minute. Grab a coffee, join a
+            conversation or take a breather between activities.
           </p>
           <div className="mt-7 border-l-2 border-punk-yellow pl-5">
             <p className="text-sm leading-relaxed text-slate-300">

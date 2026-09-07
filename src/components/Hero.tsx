@@ -16,13 +16,13 @@ export default function Hero() {
               LocalAI × Softwire <span className="text-white/30">/</span> Away day 2026
             </p>
             <h1 id="event-title" className="mt-7 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.06] font-black tracking-[-0.045em]">
-              Beyond the screen.<br />
-              <span className="text-punk-yellow">Together for a day.</span>
+              A change of scene.<br />
+              <span className="text-punk-yellow">A fresh perspective.</span>
             </h1>
             <p className="mt-7 max-w-[46ch] text-lg leading-relaxed text-slate-300">
-              We spend most of our working days apart. This one is about being
-              together: catching up, getting to know each other and exploring
-              a few big AI questions along the way.
+              Step out of the usual routine for a day of practical AI
+              challenges, fresh ideas and a chance to catch up with colleagues.
+              A little less business as usual, with some fun along the way.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href="#programme" className="event-button event-button-primary">
@@ -45,8 +45,8 @@ export default function Hero() {
             <HeroVideo videoSrc="/hero-image.mp4" posterSrc="/hero-image-v2.avif" />
             <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/15 pt-5">
               {[
-                ["01", "Catch up properly"],
-                ["02", "Try something together"],
+                ["01", "Explore fresh ideas"],
+                ["02", "Try something different"],
                 ["03", "Have a little fun"],
               ].map(([number, label]) => (
                 <div key={number}>
