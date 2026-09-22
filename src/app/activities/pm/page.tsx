@@ -62,7 +62,7 @@ export default function PmActivitiesPage() {
                 <strong className="text-punk-pink block text-base font-black">
                   13:30 — Optional creative warm-up: music session 🎵
                 </strong>
-                <span className="text-sm">Informal creative jam in Softwire's music room for anyone interested.</span>
+                <span className="text-sm">Informal creative jam in Softwire&apos;s music room for anyone interested.</span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -71,7 +71,7 @@ export default function PmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  14:00 — Softwire talk: "Proportionate by design"
+                  14:00 — Softwire talk: &quot;Proportionate by design&quot;
                 </strong>
                 <span className="text-sm">Discover how to govern AI effectively without unnecessary friction.</span>
                 <a href="https://www.softwire.com/perspectives/proportionate-by-design-governing-ai-without-the-friction" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-punk-yellow hover:underline">
@@ -166,4 +166,3 @@ export default function PmActivitiesPage() {
     </main>
   );
 }
-

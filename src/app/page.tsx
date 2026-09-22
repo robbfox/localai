@@ -5,6 +5,7 @@ import TopBar from "@/components/TopBar";
 import WhyAttend from "@/components/WhyAttend";
 import EventProgramme from "@/components/EventProgramme";
 import TeamConnection from "@/components/TeamConnection";
+import Contacts from "@/components/Contacts";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <About />
         <EventProgramme />
         <TeamConnection />
+        <Contacts />
         <WhyAttend />
       </main>
 

@@ -94,7 +94,7 @@ export default function AmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-punk-yellow block text-base font-black">
-                  10:30 — Softwire inspiration talk: "Bias as a Feature, Not a Bug"
+                  10:30 — Softwire inspiration talk: &quot;Bias as a Feature, Not a Bug&quot;
                 </strong>
                 <span className="text-sm">Explore how bias appears in AI systems and what it means for governance.</span>
               </div>
@@ -108,7 +108,7 @@ export default function AmActivitiesPage() {
                   11:00 — Hands-on challenge: AI catastrophe newscast 📺
                 </strong>
                 <span className="text-sm">
-                  Group exercise where you'll work together to create a newscast about an imagined AI problem,
+                  Group exercise where you&apos;ll work together to create a newscast about an imagined AI problem,
                   then share it back with the room.
                 </span>
               </div>

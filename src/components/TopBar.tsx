@@ -16,6 +16,7 @@ export default function TopBar() {
             ["About", "about"],
             ["Programme", "programme"],
             ["Conversations", "together"],
+            ["Contacts", "contacts"],
             ["Why attend", "why-attend"],
           ].map(([label, id]) => (
             <Link key={id} href={`/#${id}`} className="inline-flex min-h-11 items-center transition-colors hover:text-punk-yellow">
