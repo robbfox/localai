@@ -71,7 +71,7 @@ export default function PmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  14:00 — Softwire talk: &quot;Proportionate by design&quot;
+                  14:00 — Softwire talk from Public Sector Consultant Rumman Amin: &quot;Proportionate by design&quot;
                 </strong>
                 <span className="text-sm">Discover how to govern AI effectively without unnecessary friction.</span>
                 <a href="https://www.softwire.com/perspectives/proportionate-by-design-governing-ai-without-the-friction" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-punk-yellow hover:underline">
