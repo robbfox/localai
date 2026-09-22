@@ -5,12 +5,19 @@ import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Coffee, Sparkles, Users } from "lucide-react";
 
 const sessions = [
-  { id: "arrival", period: "Morning", time: "09:30", title: "Coffee & arrival", category: "Getting started", description: "Get settled, grab breakfast and have a chat before the day begins.", detail: "A chance to catch up with colleagues before the activities.", icon: Coffee },
-  { id: "welcome", period: "Morning", time: "10:00", title: "A quick hello", category: "Welcome", description: "Get everyone together and settle into the day.", detail: "A relaxed introduction from the organisers before we get stuck into the activities.", icon: Users },
-  { id: "newscast", period: "Morning", time: "10:30 onwards", title: "Breaking news: an AI catastrophe", category: "Hands-on challenge", description: "Step into a Breakfast TV newsroom and report on an imagined AI problem at MHCLG.", detail: "Work in groups to prepare a short bulletin, share it with the room before lunch and capture the key AI-risk themes raised.", icon: Sparkles },
-  { id: "music", period: "Afternoon", time: "After lunch", title: "A creative warm-up", category: "Optional · Music", description: "An informal music session for anyone who would like to take part.", detail: "A creative jam before the main afternoon activities. Participation is optional; the exact run order will be confirmed on the day.", icon: Sparkles },
-  { id: "bingo", period: "Afternoon", time: "Afternoon", title: "LocalAI Bingo", category: "Team challenge", description: "Bring the whole team together for an interactive game with custom challenges.", detail: "The main collaborative afternoon activity follows the optional warm-up. Exact timings will be confirmed on the day.", icon: Users },
-  { id: "social", period: "Afternoon", time: "After 16:30", title: "Keep the conversation going", category: "Optional · Social", description: "An informal nearby social for anyone who wants to stay a little longer.", detail: "Join colleagues at a nearby pub after the event. The venue will be confirmed on the day.", icon: Coffee },
+  { id: "arrival", period: "Morning", time: "09:00", title: "Coffee & arrival", category: "Getting started", description: "Get settled and have a chat before the day begins.", detail: "A chance to arrive and catch up with colleagues.", icon: Coffee },
+  { id: "welcome", period: "Morning", time: "10:00", title: "Welcome from organisers", category: "Welcome", description: "Get everyone together and settle into the day.", detail: "A welcome introduction from the event organisers.", icon: Users },
+  { id: "localai-update", period: "Morning", time: "10:05", title: "Update on Local AI from Kat Sexton", category: "Talk", description: "Hear about Local AI developments and initiatives.", detail: "An update from Kat Sexton on the Local AI project.", icon: Sparkles },
+  { id: "bias-talk", period: "Morning", time: "10:30", title: "Softwire inspiration talk: \"Bias as a Feature, Not a Bug\"", category: "Talk", description: "Explore how bias appears in AI systems.", detail: "An inspiring talk from Softwire exploring AI bias and its implications.", icon: Sparkles },
+  { id: "newscast", period: "Morning", time: "11:00", title: "Hands-on challenge: AI catastrophe newscast", category: "Hands-on challenge", description: "Work in groups to prepare a newscast about an imagined AI problem.", detail: "A group activity where you'll work together to create a newscast, share it back, and capture key AI-risk themes.", icon: Users },
+  { id: "lunch", period: "Afternoon", time: "12:30", title: "Lunch", category: "Break", description: "Lunch is provided.", detail: "Take a break and enjoy lunch with colleagues.", icon: Coffee },
+  { id: "music", period: "Afternoon", time: "13:30", title: "Optional creative warm-up (music session)", category: "Optional · Music", description: "An informal music session in Softwire's music room.", detail: "A creative warm-up for anyone who would like to take part. Participation is optional.", icon: Sparkles },
+  { id: "proportionate-talk", period: "Afternoon", time: "14:00", title: "Softwire talk: Proportionate by design", category: "Talk", description: "Governing AI without the friction.", detail: "Softwire explores how to govern AI effectively while maintaining proportionality.", link: "https://www.softwire.com/perspectives/proportionate-by-design-governing-ai-without-the-friction", icon: Sparkles },
+  { id: "tea-break", period: "Afternoon", time: "14:45", title: "Tea & coffee break", category: "Break", description: "A quick break for refreshments.", detail: "Grab a hot drink and stretch your legs.", icon: Coffee },
+  { id: "social-care", period: "Afternoon", time: "15:00", title: "Afternoon activity: Handling social care with care", category: "Activity", description: "Explore social care considerations in AI systems.", detail: "An afternoon activity focused on how AI can be applied thoughtfully in social care.", icon: Users },
+  { id: "feedback", period: "Afternoon", time: "15:30", title: "Feedback on the morning hands-on challenge", category: "Reflection", description: "Share insights from the newscast activity.", detail: "A chance to reflect on and discuss the morning's hands-on challenge.", icon: Users },
+  { id: "closing", period: "Afternoon", time: "15:40", title: "Quarterly planning and closing vote of thanks", category: "Closing", description: "Wrap up the day with thanks and next steps.", detail: "Closing remarks, quarterly planning insights, and a vote of thanks for the day.", icon: Sparkles },
+  { id: "social", period: "Afternoon", time: "16:00 onwards", title: "Optional social at The Vine pub", category: "Optional · Social", description: "Join colleagues at a nearby pub across the street.", detail: "Optional social at The Vine pub, 86 Highgate Rd, London NW5 1PB. Continue the conversation in a relaxed setting.", icon: Coffee },
 ];
 
 const filters = ["All day", "Morning", "Afternoon"] as const;
@@ -69,7 +76,7 @@ export default function EventProgramme() {
               {visibleSessions.length} activities · {filter}
             </p>
             <ol id="programme-sessions" className="space-y-3">
-              {visibleSessions.map(({ id, time, title, category, description, detail, icon: Icon }) => (
+              {visibleSessions.map(({ id, time, title, category, description, detail, link, icon: Icon }) => (
                 <li key={id}>
                   <details className="event-session group rounded-2xl border border-white/10 bg-white/[0.025]">
                     <summary className="flex cursor-pointer list-none items-start gap-4 rounded-2xl p-5">
@@ -85,6 +92,11 @@ export default function EventProgramme() {
                     </summary>
                     <div className="event-session-content border-t border-white/10 px-5 py-5 sm:pl-[5.25rem]">
                       <p className="text-sm leading-relaxed text-slate-300">{detail}</p>
+                      {link && (
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-punk-yellow hover:underline">
+                          Learn more <ArrowUpRight size={14} aria-hidden="true" />
+                        </a>
+                      )}
                     </div>
                   </details>
                 </li>

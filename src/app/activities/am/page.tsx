@@ -42,7 +42,7 @@ export default function AmActivitiesPage() {
         </div>
 
         <p className="mt-4 max-w-[65ch] text-[17px] leading-relaxed text-text-dark-secondary">
-          Coffee and a proper catch-up first, then a relaxed welcome and a creative group activity.
+          Coffee and a proper catch-up first, then welcome talks and insights into AI ethics and governance.
         </p>
 
         <section className="relative mt-10 overflow-hidden rounded-2xl border-2 border-punk-pink/40 bg-black/40 p-7 shadow-[6px_6px_0px_rgba(255,42,133,0.3)] backdrop-blur-sm">
@@ -52,7 +52,7 @@ export default function AmActivitiesPage() {
           </div>
 
           <h2 className="text-2xl font-black text-punk-yellow flex items-center gap-2">
-            <span>⚡</span> Schedule and instructions
+            <span>⚡</span> Schedule
           </h2>
           <ol className="mt-6 space-y-5 text-text-dark-secondary">
             <li className="flex gap-4 items-start">
@@ -61,7 +61,7 @@ export default function AmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  09:30 — Coffee and arrival
+                  09:00 — Coffee & arrival
                 </strong>
                 <span className="text-sm">Get settled, grab breakfast, and connect with other attendees.</span>
               </div>
@@ -72,9 +72,9 @@ export default function AmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  10:00 — A quick hello from the organisers
+                  10:00 — Welcome from organisers
                 </strong>
-                <span className="text-sm">Get everyone together and settle into the day before the activities.</span>
+                <span className="text-sm">Get everyone together and settle into the day before the talks and activities.</span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -82,12 +82,34 @@ export default function AmActivitiesPage() {
                 03
               </span>
               <div>
+                <strong className="text-white block text-base font-bold">
+                  10:05 — Update on Local AI from Kat Sexton
+                </strong>
+                <span className="text-sm">Hear about developments and initiatives in the Local AI project.</span>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-pink text-black font-black text-xs shadow-[2px_2px_0px_#ffe600]">
+                04
+              </span>
+              <div>
                 <strong className="text-punk-yellow block text-base font-black">
-                  10:30 onwards — AI catastrophe newscast activity 📺
+                  10:30 — Softwire inspiration talk: "Bias as a Feature, Not a Bug"
+                </strong>
+                <span className="text-sm">Explore how bias appears in AI systems and what it means for governance.</span>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-yellow text-black font-black text-xs shadow-[2px_2px_0px_#ff2a85]">
+                05
+              </span>
+              <div>
+                <strong className="text-punk-yellow block text-base font-black">
+                  11:00 — Hands-on challenge: AI catastrophe newscast 📺
                 </strong>
                 <span className="text-sm">
-                  Group exercise mimicking a Breakfast TV bulletin announcing an AI problem at MHCLG.
-                  Each group prepares a short segment and shares it back.
+                  Group exercise where you'll work together to create a newscast about an imagined AI problem,
+                  then share it back with the room.
                 </span>
               </div>
             </li>
@@ -113,7 +135,7 @@ export default function AmActivitiesPage() {
             </li>
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-pink" />
-              <span className="font-bold text-white">Lunch is provided for all attendees</span>
+              <span className="font-bold text-white">Lunch is provided at 12:30 for all attendees</span>
             </li>
           </ul>
         </section>

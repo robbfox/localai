@@ -42,8 +42,7 @@ export default function PmActivitiesPage() {
         </div>
 
         <p className="mt-4 max-w-[65ch] text-[17px] leading-relaxed text-text-dark-secondary">
-          Afternoon programme starts after lunch, with an optional warm-up session before the main
-          collaborative workshop.
+          After lunch, discover how to apply AI thoughtfully with talks and reflections on governance and social care.
         </p>
 
         <section className="relative mt-10 overflow-hidden rounded-2xl border-2 border-punk-yellow/40 bg-black/40 p-7 shadow-[6px_6px_0px_rgba(255,230,0,0.3)] backdrop-blur-sm">
@@ -52,7 +51,7 @@ export default function PmActivitiesPage() {
           </div>
 
           <h2 className="text-2xl font-black text-punk-pink flex items-center gap-2">
-            <span>🎸</span> Schedule and instructions
+            <span>🎸</span> Schedule
           </h2>
           <ol className="mt-6 space-y-5 text-text-dark-secondary">
             <li className="flex gap-4 items-start">
@@ -61,9 +60,9 @@ export default function PmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-punk-pink block text-base font-black">
-                  After lunch — Optional music session 🎵
+                  13:30 — Optional creative warm-up: music session 🎵
                 </strong>
-                <span className="text-sm">Informal creative jam session if attendees are interested.</span>
+                <span className="text-sm">Informal creative jam in Softwire's music room for anyone interested.</span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -72,9 +71,12 @@ export default function PmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-white block text-base font-bold">
-                  PM session proper
+                  14:00 — Softwire talk: "Proportionate by design"
                 </strong>
-                <span className="text-sm">Main afternoon activities begin after the optional session.</span>
+                <span className="text-sm">Discover how to govern AI effectively without unnecessary friction.</span>
+                <a href="https://www.softwire.com/perspectives/proportionate-by-design-governing-ai-without-the-friction" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-punk-yellow hover:underline">
+                  Learn more →
+                </a>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -82,10 +84,10 @@ export default function PmActivitiesPage() {
                 03
               </span>
               <div>
-                <strong className="text-punk-yellow block text-base font-black">
-                  Whole team activity — LocalAI Bingo 🎱
+                <strong className="text-white block text-base font-bold">
+                  14:45 — Tea & coffee break
                 </strong>
-                <span className="text-sm">High energy interactive team game with custom challenges.</span>
+                <span className="text-sm">Take a pause and refresh before the afternoon activity.</span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -93,11 +95,44 @@ export default function PmActivitiesPage() {
                 04
               </span>
               <div>
+                <strong className="text-punk-yellow block text-base font-black">
+                  15:00 — Afternoon activity: Handling social care with care 🤝
+                </strong>
+                <span className="text-sm">Explore how AI can be applied thoughtfully and ethically in social care settings.</span>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-yellow text-black font-black text-xs shadow-[2px_2px_0px_#ff2a85]">
+                05
+              </span>
+              <div>
                 <strong className="text-white block text-base font-bold">
-                  After 16:30 — Optional social 🍻
+                  15:30 — Feedback on the morning hands-on challenge
+                </strong>
+                <span className="text-sm">Reflect on and discuss insights from the newscast activity.</span>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-pink text-black font-black text-xs shadow-[2px_2px_0px_#ffe600]">
+                06
+              </span>
+              <div>
+                <strong className="text-white block text-base font-bold">
+                  15:40 — Quarterly planning and closing vote of thanks
+                </strong>
+                <span className="text-sm">Wrap up the day with closing remarks and a vote of thanks.</span>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none flex h-7 w-7 items-center justify-center rounded bg-punk-yellow text-black font-black text-xs shadow-[2px_2px_0px_#ff2a85]">
+                07
+              </span>
+              <div>
+                <strong className="text-white block text-base font-bold">
+                  16:00 onwards — Optional social 🍻
                 </strong>
                 <span className="text-sm">
-                  Informal nearby social for anyone who wants to continue the conversation.
+                  Join colleagues at The Vine pub (86 Highgate Rd, London NW5 1PB) across the street to continue the conversation.
                 </span>
               </div>
             </li>
@@ -115,15 +150,15 @@ export default function PmActivitiesPage() {
           <ul className="mt-5 space-y-3 pl-2 text-text-dark-secondary">
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-yellow" />
-              <span>Lunch is provided before the afternoon session</span>
+              <span>Lunch is provided at 12:30 before the afternoon session starts</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-pink" />
-              <span>The exact PM run order will be confirmed on the day</span>
+              <span>The music session at 13:30 is optional and just before the afternoon talks</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-punk-yellow" />
-              <span className="font-bold text-white">Optional social at a nearby pub after 16:30</span>
+              <span className="font-bold text-white">Optional social at The Vine pub after 16:00</span>
             </li>
           </ul>
         </section>
