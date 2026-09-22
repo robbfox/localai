@@ -33,7 +33,7 @@ export default function EventProgramme() {
           <div>
             <p className="event-eyebrow">The programme</p>
             <h2 id="programme-title" className="mt-4 text-4xl leading-tight font-black tracking-tight md:text-5xl">
-              A loose plan.<br /><span className="text-punk-yellow">Plenty to try.</span>
+              A day with direction.<br /><span className="text-punk-yellow">Plenty of space to explore.</span>
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-slate-300">
               A guide to the day, not a conference agenda. Browse the

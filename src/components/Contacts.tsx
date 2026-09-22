@@ -5,6 +5,7 @@
 
 import { Phone } from "lucide-react";
 
+
 const contacts = [
   { name: "Art", phone: "07721991670" },
   { name: "Chucks", phone: "07878854220" },
