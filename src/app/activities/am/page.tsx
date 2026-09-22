@@ -94,9 +94,12 @@ export default function AmActivitiesPage() {
               </span>
               <div>
                 <strong className="text-punk-yellow block text-base font-black">
-                  10:30 — Softwire inspiration talk: &quot;Bias as a Feature, Not a Bug&quot;
+                  10:30 — Softwire inspiration talk from Elizabeth Jamieson: &quot;Bias as a Feature, Not a Bug&quot;
                 </strong>
-                <span className="text-sm">Explore how bias appears in AI systems and what it means for governance.</span>
+                <span className="text-sm">
+                  A non-technical talk on how gender bias enters AI systems through structural choices,
+                  with real-world examples and practical steps such as dataset auditing and safety-by-design.
+                </span>
               </div>
             </li>
             <li className="flex gap-4 items-start">
