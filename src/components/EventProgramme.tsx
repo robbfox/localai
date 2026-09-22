@@ -40,11 +40,11 @@ export default function EventProgramme() {
               activities and open anything that catches your eye.
             </p>
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-              <p className="text-sm font-semibold text-white">A little room for spontaneity</p>
+              <p className="text-sm font-semibold text-white">A structured day with space to reflect</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-400">
-                Lunch is provided. Any contributions from speakers will be
-                informal, rather than scheduled talks. An exact schedule
-                will be confirmed nearer the day.
+                Lunch is provided. The day includes scheduled talks, practical
+                activities and time between sessions to compare notes with
+                colleagues.
               </p>
             </div>
             <div className="mt-6 flex flex-wrap gap-5 text-sm">
