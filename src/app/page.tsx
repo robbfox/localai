@@ -6,6 +6,7 @@ import WhyAttend from "@/components/WhyAttend";
 import EventProgramme from "@/components/EventProgramme";
 import TeamConnection from "@/components/TeamConnection";
 import Contacts from "@/components/Contacts";
+import OfficeAccess from "@/components/OfficeAccess";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <About />
         <EventProgramme />
+        <OfficeAccess />
         <TeamConnection />
         <Contacts />
         <WhyAttend />
