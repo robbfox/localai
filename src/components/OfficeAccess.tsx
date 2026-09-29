@@ -10,7 +10,7 @@ const arrivalSteps = [
   {
     title: "Find Softwire reception",
     description:
-      "From the building's main entrance, turn left and follow the hallway all the way to the lifts. Take the lift to Floor 1 for the main Softwire reception.",
+      "From the building's main entrance, turn left and follow the hallway all the way to the lift. Take the lift to Floor 1 for the main Softwire reception.",
     icon: DoorOpen,
   },
   {
