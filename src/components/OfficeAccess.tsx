@@ -4,7 +4,7 @@ const arrivalSteps = [
   {
     title: "Find the building entrance",
     description:
-      "From Highgate Road, turn left into Highgate Studios, then turn right. The entrance should be straight ahead. There may be a security cabin by the right turn.",
+      "From Highgate Road, turn into Highgate Studios, then turn right. The entrance should be straight ahead. There may be a security cabin by the right turn.",
     icon: Signpost,
   },
   {
